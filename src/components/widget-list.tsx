@@ -15,7 +15,7 @@ const WIDGETS: Widget[] = [
     title: "Dólar Blue",
     url: "/dolar-blue",
     description: "Keep track of the latest USD exchange rate in Argentina.",
-    icon: <WidthIcon className="h-6 w-6" />,
+    icon: <WidthIcon className="h-6 w-6 text-zinc-100 dark:text-zinc-900" />,
   },
 ];
 

@@ -4,8 +4,8 @@ import { WidgetList } from "@/components/widget-list";
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-12 md:px-6 md:py-16 lg:py-20">
-      <div className="space-y-8">
-        <div className="border-b border-zinc-900 pb-4 text-center">
+      <div className="space-y-10">
+        <div className="border-b border-zinc-300 pb-8 text-center dark:border-zinc-900">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             iOS Web Widgets
           </h1>
