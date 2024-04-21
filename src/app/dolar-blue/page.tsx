@@ -1,3 +1,5 @@
+import { FormattedDate } from "@/components/formatted-date";
+
 async function fetchUSDValue() {
   const API_URL = "https://dolarhoy.com/i/cotizaciones/dolar-blue";
   const request = await fetch(API_URL, {
@@ -10,10 +12,7 @@ async function fetchUSDValue() {
   return {
     buy,
     sell,
-    date: new Date().toLocaleTimeString("es-AR", {
-      hour: "2-digit",
-      minute: "2-digit",
-    }),
+    date: new Date(),
   };
 }
 
@@ -49,7 +48,7 @@ export default async function ArsUsd() {
           </span>
         </p>
         <time className="mt-3 text-sm font-light text-zinc-800 dark:text-zinc-400">
-          Actualizado: {date}
+          Actualizado: <FormattedDate date={date} />
         </time>
       </div>
     </div>
