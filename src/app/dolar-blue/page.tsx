@@ -1,6 +1,9 @@
 async function fetchUSDValue() {
   const API_URL = "https://dolarhoy.com/i/cotizaciones/dolar-blue";
-  const request = await fetch(API_URL);
+  const request = await fetch(API_URL, {
+    next: { revalidate: 3600 },
+    headers: { "Content-Type": "text/html" },
+  });
   const text = await request.text();
   const buy = text.match(/<p>(\d+\.\d+)<span>Compra<\/span><\/p>/)?.[1];
   const sell = text.match(/<p>(\d+\.\d+)<span>Venta<\/span><\/p>/)?.[1];
