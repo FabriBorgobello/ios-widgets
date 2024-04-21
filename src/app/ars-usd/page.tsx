@@ -20,7 +20,7 @@ export default async function ArsUsd() {
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-zinc-800">
       <div className="flex aspect-square w-80 flex-col items-center justify-center gap-2 bg-zinc-950 p-8 text-zinc-50">
-        <h1 className="text-3xl">Dólar Blue</h1>
+        <h1 className="text-3xl">🇦🇷 Dólar Blue 💵</h1>
         <hr className="w-full border border-zinc-400 opacity-30" />
         <p className="flex flex-col items-center">
           <span className="text-zinc-400">Compra</span>
@@ -35,7 +35,7 @@ export default async function ArsUsd() {
           </span>
         </p>
         <time className="mt-3 text-sm font-light text-zinc-400">
-          Updated: {date}
+          Actualizado: {date}
         </time>
       </div>
     </div>
