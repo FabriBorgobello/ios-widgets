@@ -1,5 +1,3 @@
-import { FormattedDate } from "@/components/formatted-date";
-
 async function fetchUSDValue() {
   const API_URL = "https://dolarhoy.com/i/cotizaciones/dolar-blue";
   const request = await fetch(API_URL, {
@@ -12,7 +10,6 @@ async function fetchUSDValue() {
   return {
     buy,
     sell,
-    date: new Date(),
   };
 }
 
@@ -25,10 +22,10 @@ function formatToARS(value: string | number) {
 }
 
 export default async function ArsUsd() {
-  const { buy, sell, date } = await fetchUSDValue();
+  const { buy, sell } = await fetchUSDValue();
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-zinc-800">
-      <div className="flex aspect-square w-80 flex-col items-center justify-center gap-3 bg-zinc-50 p-8 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
+      <div className="flex aspect-square w-80 flex-col items-center justify-center gap-4 bg-zinc-50 p-8 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
         <div className="flex items-center gap-2">
           <span className="text-3xl">🇦🇷</span>
           <h1 className="text-xl font-semibold">Dólar Blue</h1>
@@ -47,12 +44,6 @@ export default async function ArsUsd() {
             {sell ? formatToARS(sell) : "-"}
           </span>
         </p>
-        <time
-          suppressHydrationWarning
-          className="mt-3 text-sm font-light text-zinc-800 dark:text-zinc-400"
-        >
-          Actualizado: <FormattedDate date={date} />
-        </time>
       </div>
     </div>
   );
