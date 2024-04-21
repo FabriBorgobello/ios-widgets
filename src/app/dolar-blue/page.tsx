@@ -47,7 +47,10 @@ export default async function ArsUsd() {
             {sell ? formatToARS(sell) : "-"}
           </span>
         </p>
-        <time className="mt-3 text-sm font-light text-zinc-800 dark:text-zinc-400">
+        <time
+          suppressHydrationWarning
+          className="mt-3 text-sm font-light text-zinc-800 dark:text-zinc-400"
+        >
           Actualizado: <FormattedDate date={date} />
         </time>
       </div>
