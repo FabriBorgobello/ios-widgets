@@ -19,7 +19,7 @@ export default async function BananaTracker() {
           <span className="text-3xl">🍌</span>
         </div>
         <hr className="w-full border border-zinc-400 opacity-30 dark:border-zinc-400" />
-        <ul className="grid w-full grid-cols-2 gap-4">
+        <ul className="grid w-full grid-cols-2 gap-x-1 gap-y-4">
           {PRICES.map(({ name, price }) => (
             <li
               key={name}
