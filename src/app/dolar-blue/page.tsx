@@ -5,8 +5,8 @@ async function fetchUSDValue() {
     headers: { "Content-Type": "text/html" },
   });
   const text = await request.text();
-  const buy = text.match(/<p>(\d+\.\d+)<span>Compra<\/span><\/p>/)?.[1];
-  const sell = text.match(/<p>(\d+\.\d+)<span>Venta<\/span><\/p>/)?.[1];
+  const buy = text.match(/<p>(\d+\,\d+)<span>Compra<\/span><\/p>/)?.[1];
+  const sell = text.match(/<p>(\d+\,\d+)<span>Venta<\/span><\/p>/)?.[1];
   return {
     buy,
     sell,
