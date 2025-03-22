@@ -114,7 +114,7 @@ function DailyForecast({ forecast }: { forecast: WeatherForecast }) {
         />
         <span className="text-sm font-medium">{day}</span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex  items-center justify-end gap-2">
         <div className="bg-secondary h-2 w-16 overflow-hidden rounded-full">
           <div
             className={cn(
@@ -126,7 +126,7 @@ function DailyForecast({ forecast }: { forecast: WeatherForecast }) {
         </div>
         <span
           className={cn(
-            "text-xs font-bold",
+            "min-w-7 text-right text-xs font-bold ",
             getRainProbabilityColor(forecast.rainProbability),
           )}
         >
@@ -193,7 +193,7 @@ export default async function WeatherWidget() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
-      <Card className="flex h-[320px] w-[640px] flex-col overflow-hidden border-none shadow-lg">
+      <Card className="flex h-80 w-80 flex-col overflow-hidden border-none shadow-lg">
         {/* Header */}
         <div className="bg-gradient-to-br from-violet-800 to-violet-950 p-4 text-white">
           <div className="flex items-center justify-between">
