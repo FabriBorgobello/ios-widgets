@@ -28,6 +28,17 @@ const WIDGETS: Widget[] = [
       </div>
     ),
   },
+  {
+    id: 3,
+    title: "Rain Probability",
+    url: "/rain-probability",
+    description: "Check the probability of rain in Barcelona.",
+    icon: (
+      <div className="flex h-6 w-6 items-center justify-center text-3xl text-zinc-100 dark:text-zinc-900">
+        🌧️
+      </div>
+    ),
+  },
 ];
 
 export function WidgetList() {
